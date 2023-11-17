@@ -3,10 +3,11 @@
 
 generator client {
     provider = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-1.0.x", "linux-arm64-openssl-1.0.x","linux-arm64-openssl-1.1.x","linux-arm64-openssl-3.0.x"]
 }
 
 datasource db {
-    provider = "sqlite"
+    provider = "postgresql"
     // NOTE: When using mysql or sqlserver, uncomment the @db.Text annotations in model Account below
     // Further reading:
     // https://next-auth.js.org/adapters/prisma#create-the-prisma-schema
